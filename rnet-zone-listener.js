@@ -33,7 +33,7 @@ module.exports = function (RED) {
 		    }
 
 		    else if (path[4] === 'Volume') {
-			var max = Number(node.context().get('rnet.zone.' + controller + '.' + zone + '.maxVolume'));
+			var max = Number(node.context().global.get('rnet.zone.' + controller + '.' + zone + '.maxVolume'));
 			msg.ui_control = {
 			    'min': 0,
 			    'max': isNaN(max) ? 0 : max
@@ -43,7 +43,7 @@ module.exports = function (RED) {
 			
 			send([null, null, msg, null]);
 		    } else if (path[4] === 'MaxVolume') {
-			var vol = Number(node.context().get('rnet.zone.' + controller + '.' + zone + '.volume'));
+			var vol = Number(node.context().global.get('rnet.zone.' + controller + '.' + zone + '.volume'));
 
 			msg.payload = isNaN(vol) ? 0 : Number(vol);
 
