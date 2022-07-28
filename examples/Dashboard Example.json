@@ -1,0 +1,2017 @@
+[
+    {
+        "id": "451d017d874f8d33",
+        "type": "tab",
+        "label": "RNet Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "934e52c14a1226a2",
+        "type": "group",
+        "z": "451d017d874f8d33",
+        "name": "RNet-MQTT Bridge",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "7cf43a5f7daf0dca",
+            "5828ff551ee0ec94",
+            "a71a0738151772d4",
+            "15d1f38dc1eca127",
+            "561239a06917a4e7",
+            "990aebc6a0176709"
+        ],
+        "x": 554,
+        "y": 39,
+        "w": 652,
+        "h": 142
+    },
+    {
+        "id": "7e75f5a64dfbe49a",
+        "type": "group",
+        "z": "451d017d874f8d33",
+        "name": "Global",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#c8e7a7",
+            "fill-opacity": "0.56",
+            "label": true
+        },
+        "nodes": [
+            "639d683f6e23d78c",
+            "200d9c7ea103e3cc",
+            "5c2c204babf37298",
+            "bdafd30dd6b10d7b",
+            "d3af22405cfbc161",
+            "b9b7fdaeb87b5917",
+            "c6043c84ab1fddf5",
+            "2ffeac12140683b8",
+            "0cd8d146f743468c",
+            "f1b3eaa2a781a66f",
+            "c09a3e7b55fa3eb0",
+            "e4882decd9ce6059",
+            "5f70c783ba0b8d9e",
+            "85431ddb2172c62b",
+            "2f3e8a33c12c0fa5",
+            "2d3491daf27bfef2",
+            "e83a2ecbf2717a80"
+        ],
+        "x": 74,
+        "y": 1199,
+        "w": 1002,
+        "h": 302
+    },
+    {
+        "id": "29fc79acf6a9cd3e",
+        "type": "group",
+        "z": "451d017d874f8d33",
+        "name": "Zone 0",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#d1d1d1",
+            "label": true,
+            "color": "#0070c0"
+        },
+        "nodes": [
+            "5765ff10598c6a64",
+            "3a4ae333c695774a",
+            "482465206175e4d1",
+            "d19bc379693822d9",
+            "06a70f7063f28c27",
+            "8f90782e4e9a2bca",
+            "c1fad86a6a177ff7",
+            "f28afa6652a3e91c"
+        ],
+        "x": 64,
+        "y": 259,
+        "w": 782,
+        "h": 262
+    },
+    {
+        "id": "35327b618f732e2c",
+        "type": "group",
+        "z": "451d017d874f8d33",
+        "name": "Zone 1",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#d1d1d1",
+            "label": true,
+            "color": "#0070c0"
+        },
+        "nodes": [
+            "1c577810521351df",
+            "9e9b054882acbabf",
+            "c542be9fa143eade",
+            "02fa3635c021490c",
+            "926218f5896607f8",
+            "733faa6e6cee7cdd",
+            "ab90a2e0a1f1f199",
+            "e459dd44a3e381aa"
+        ],
+        "x": 64,
+        "y": 539,
+        "w": 782,
+        "h": 262
+    },
+    {
+        "id": "0eb49d72e7ab838d",
+        "type": "group",
+        "z": "451d017d874f8d33",
+        "name": "Zone 2",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#d1d1d1",
+            "label": true,
+            "color": "#0070c0"
+        },
+        "nodes": [
+            "0e5162aba1533a16",
+            "d2212ecc374f5bcb",
+            "a70643c62cddc8bd",
+            "c9c740b5a3326cdf",
+            "27f99351b4e00120",
+            "82c502232f1233db",
+            "63264acc5649cecc",
+            "661488df7263a4b1"
+        ],
+        "x": 64,
+        "y": 819,
+        "w": 782,
+        "h": 262
+    },
+    {
+        "id": "eb08dca6d197bca0",
+        "type": "group",
+        "z": "451d017d874f8d33",
+        "name": "Zone 3",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#d1d1d1",
+            "label": true,
+            "color": "#0070c0"
+        },
+        "nodes": [
+            "af4dae255f148c0e",
+            "7f9fe41acb9fa86f",
+            "eb35fc1ba7f8437f",
+            "c991943bc5852d02",
+            "7d407e83f0f7f87c",
+            "0eb3278d13d93b47",
+            "4cedf00337cedaae",
+            "f11d5d6739679652"
+        ],
+        "x": 864,
+        "y": 259,
+        "w": 782,
+        "h": 262
+    },
+    {
+        "id": "cf1895087bf7054a",
+        "type": "group",
+        "z": "451d017d874f8d33",
+        "name": "Zone 4",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#d1d1d1",
+            "label": true,
+            "color": "#0070c0"
+        },
+        "nodes": [
+            "53d2da986ebba0bb",
+            "9d1635666f1e728d",
+            "4eda2d376bde4fa6",
+            "66cc09121ff80f5e",
+            "34e3136fa1edb45c",
+            "2a528bf571ce1592",
+            "fa27219171d4119a",
+            "e0c3a7d140103961"
+        ],
+        "x": 864,
+        "y": 539,
+        "w": 782,
+        "h": 262
+    },
+    {
+        "id": "ae44a50fad4eec0f",
+        "type": "group",
+        "z": "451d017d874f8d33",
+        "name": "Zone 5",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#d1d1d1",
+            "label": true,
+            "color": "#0070c0"
+        },
+        "nodes": [
+            "68f3bea20f7dfd8a",
+            "ae862ebc3a5a5d4c",
+            "5e8947df1dfe176b",
+            "7180ea52b3b3984d",
+            "14ba8a0992a2aabe",
+            "8d98f49a128a1ff4",
+            "3e232f0b293c4416",
+            "ecde8378ec01d85b"
+        ],
+        "x": 864,
+        "y": 819,
+        "w": 782,
+        "h": 262
+    },
+    {
+        "id": "7cf43a5f7daf0dca",
+        "type": "mqtt out",
+        "z": "451d017d874f8d33",
+        "g": "934e52c14a1226a2",
+        "name": "rnet/status/#",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ea7c963ee0f7393f",
+        "x": 1110,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5828ff551ee0ec94",
+        "type": "mqtt in",
+        "z": "451d017d874f8d33",
+        "g": "934e52c14a1226a2",
+        "name": "",
+        "topic": "rnet/control/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ea7c963ee0f7393f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 650,
+        "y": 80,
+        "wires": [
+            [
+                "990aebc6a0176709"
+            ]
+        ]
+    },
+    {
+        "id": "a71a0738151772d4",
+        "type": "link out",
+        "z": "451d017d874f8d33",
+        "g": "934e52c14a1226a2",
+        "name": "RNet-Out",
+        "mode": "link",
+        "links": [
+            "5c6bee3ec97fcc42",
+            "d19bc379693822d9",
+            "65c781db4e6d04a5",
+            "56279fc31f2f2291",
+            "cc1916130dae7e73",
+            "e3b72a4cfed44946",
+            "e40ad92f5c3109f7",
+            "a1633757f46c73c0",
+            "94f968f5195021c1",
+            "cb38877a34ee54bf",
+            "497cf95dcd8adbdf",
+            "0adfa62cded0718f",
+            "02fa3635c021490c",
+            "c9c740b5a3326cdf",
+            "c991943bc5852d02",
+            "66cc09121ff80f5e",
+            "7180ea52b3b3984d"
+        ],
+        "x": 1055,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "15d1f38dc1eca127",
+        "type": "link in",
+        "z": "451d017d874f8d33",
+        "g": "934e52c14a1226a2",
+        "name": "RNet-In",
+        "links": [
+            "9e835574769fd79b",
+            "482465206175e4d1",
+            "0d53702f17971555",
+            "45532739b33fe027",
+            "783b949850d2dff4",
+            "5227933e7b5c7555",
+            "1a945951f39965ca",
+            "5b7531d434ddc54f",
+            "966ab0b80d6d07d8",
+            "200d9c7ea103e3cc",
+            "7bfe03dc36df7306",
+            "1b8bc145250ee7d0",
+            "b69be1872a16feba",
+            "c542be9fa143eade",
+            "a70643c62cddc8bd",
+            "eb35fc1ba7f8437f",
+            "4eda2d376bde4fa6",
+            "5e8947df1dfe176b"
+        ],
+        "x": 705,
+        "y": 140,
+        "wires": [
+            [
+                "990aebc6a0176709"
+            ]
+        ]
+    },
+    {
+        "id": "639d683f6e23d78c",
+        "type": "ui_button",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "",
+        "group": "4c4dd0d896be95fb",
+        "order": 1,
+        "width": 4,
+        "height": 2,
+        "passthru": false,
+        "label": "ALL OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "power_settings_new",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "ZonePower",
+        "topicType": "str",
+        "x": 160,
+        "y": 1240,
+        "wires": [
+            [
+                "bdafd30dd6b10d7b"
+            ]
+        ]
+    },
+    {
+        "id": "200d9c7ea103e3cc",
+        "type": "link out",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "link out 7",
+        "mode": "link",
+        "links": [
+            "15d1f38dc1eca127"
+        ],
+        "x": 1035,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "5c2c204babf37298",
+        "type": "ui_button",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "",
+        "group": "4c4dd0d896be95fb",
+        "order": 2,
+        "width": 4,
+        "height": 2,
+        "passthru": false,
+        "label": "ALL ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "power_settings_new",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "ZonePower",
+        "topicType": "str",
+        "x": 160,
+        "y": 1300,
+        "wires": [
+            [
+                "bdafd30dd6b10d7b"
+            ]
+        ]
+    },
+    {
+        "id": "bdafd30dd6b10d7b",
+        "type": "function",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "combine",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1260,
+        "wires": [
+            [
+                "c6043c84ab1fddf5",
+                "2ffeac12140683b8",
+                "0cd8d146f743468c",
+                "f1b3eaa2a781a66f",
+                "c09a3e7b55fa3eb0",
+                "e4882decd9ce6059"
+            ]
+        ]
+    },
+    {
+        "id": "d3af22405cfbc161",
+        "type": "ui_button_state",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "group": "4c4dd0d896be95fb",
+        "name": "All Source",
+        "order": 3,
+        "onClass": "",
+        "offClass": "",
+        "width": 8,
+        "height": 1,
+        "options": [
+            {
+                "label": "S0",
+                "value": "0",
+                "onColor": "#99ff99",
+                "offColor": "#ff3333"
+            },
+            {
+                "label": "S1",
+                "value": "1",
+                "onColor": "#99ff99",
+                "offColor": "#ffa02a"
+            },
+            {
+                "label": "S2",
+                "value": "2",
+                "onColor": "#99ff99",
+                "offColor": "#d1d41a"
+            },
+            {
+                "label": "S3",
+                "value": "3",
+                "onColor": "#99ff99",
+                "offColor": "#93ff40"
+            },
+            {
+                "label": "S4",
+                "value": "4",
+                "onColor": "#99ff99",
+                "offColor": "#54ffeb"
+            },
+            {
+                "label": "S5",
+                "value": "5",
+                "onColor": "#99ff99",
+                "offColor": "#576cff"
+            }
+        ],
+        "x": 170,
+        "y": 1380,
+        "wires": [
+            [
+                "b9b7fdaeb87b5917"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b9b7fdaeb87b5917",
+        "type": "change",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "GlobalZoneSource",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ZoneSource",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 1380,
+        "wires": [
+            [
+                "bdafd30dd6b10d7b"
+            ]
+        ]
+    },
+    {
+        "id": "561239a06917a4e7",
+        "type": "rnet-status",
+        "z": "451d017d874f8d33",
+        "g": "934e52c14a1226a2",
+        "rnet": "15781dc87668e1a5",
+        "name": "",
+        "x": 910,
+        "y": 140,
+        "wires": [
+            [
+                "a71a0738151772d4",
+                "7cf43a5f7daf0dca"
+            ]
+        ]
+    },
+    {
+        "id": "990aebc6a0176709",
+        "type": "rnet-control",
+        "z": "451d017d874f8d33",
+        "g": "934e52c14a1226a2",
+        "rnet": "15781dc87668e1a5",
+        "name": "",
+        "x": 910,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5765ff10598c6a64",
+        "type": "ui_switch",
+        "z": "451d017d874f8d33",
+        "g": "29fc79acf6a9cd3e",
+        "name": "",
+        "label": "Power",
+        "tooltip": "",
+        "group": "43ff66300d5b9c4a",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ZonePower",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 450,
+        "y": 360,
+        "wires": [
+            [
+                "f28afa6652a3e91c"
+            ]
+        ]
+    },
+    {
+        "id": "3a4ae333c695774a",
+        "type": "ui_slider",
+        "z": "451d017d874f8d33",
+        "g": "29fc79acf6a9cd3e",
+        "name": "",
+        "label": "Volume",
+        "tooltip": "",
+        "group": "43ff66300d5b9c4a",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "all",
+        "topic": "ZoneVolume",
+        "topicType": "str",
+        "min": 0,
+        "max": "0",
+        "step": 1,
+        "className": "",
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "f28afa6652a3e91c"
+            ]
+        ]
+    },
+    {
+        "id": "482465206175e4d1",
+        "type": "link out",
+        "z": "451d017d874f8d33",
+        "g": "29fc79acf6a9cd3e",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "15d1f38dc1eca127"
+        ],
+        "x": 805,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d19bc379693822d9",
+        "type": "link in",
+        "z": "451d017d874f8d33",
+        "g": "29fc79acf6a9cd3e",
+        "name": "link in 1",
+        "links": [
+            "a71a0738151772d4"
+        ],
+        "x": 105,
+        "y": 440,
+        "wires": [
+            [
+                "c1fad86a6a177ff7"
+            ]
+        ]
+    },
+    {
+        "id": "06a70f7063f28c27",
+        "type": "ui_dropdown",
+        "z": "451d017d874f8d33",
+        "g": "29fc79acf6a9cd3e",
+        "name": "",
+        "label": "Source",
+        "tooltip": "",
+        "place": "Select Source",
+        "group": "43ff66300d5b9c4a",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "ZoneSource",
+        "topicType": "str",
+        "className": "",
+        "x": 460,
+        "y": 480,
+        "wires": [
+            [
+                "f28afa6652a3e91c"
+            ]
+        ]
+    },
+    {
+        "id": "8f90782e4e9a2bca",
+        "type": "ui_text",
+        "z": "451d017d874f8d33",
+        "g": "29fc79acf6a9cd3e",
+        "group": "43ff66300d5b9c4a",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Zone Name",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 470,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c1fad86a6a177ff7",
+        "type": "rnet-zone-listener",
+        "z": "451d017d874f8d33",
+        "g": "29fc79acf6a9cd3e",
+        "controller": 0,
+        "zone": 0,
+        "name": "",
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "8f90782e4e9a2bca"
+            ],
+            [
+                "5765ff10598c6a64"
+            ],
+            [
+                "3a4ae333c695774a"
+            ],
+            [
+                "06a70f7063f28c27"
+            ]
+        ]
+    },
+    {
+        "id": "f28afa6652a3e91c",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "29fc79acf6a9cd3e",
+        "controller": 0,
+        "zone": 0,
+        "name": "",
+        "x": 670,
+        "y": 420,
+        "wires": [
+            [
+                "482465206175e4d1"
+            ]
+        ]
+    },
+    {
+        "id": "1c577810521351df",
+        "type": "ui_switch",
+        "z": "451d017d874f8d33",
+        "g": "35327b618f732e2c",
+        "name": "",
+        "label": "Power",
+        "tooltip": "",
+        "group": "a705f2ec0c495ee3",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ZonePower",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "e459dd44a3e381aa"
+            ]
+        ]
+    },
+    {
+        "id": "9e9b054882acbabf",
+        "type": "ui_slider",
+        "z": "451d017d874f8d33",
+        "g": "35327b618f732e2c",
+        "name": "",
+        "label": "Volume",
+        "tooltip": "",
+        "group": "a705f2ec0c495ee3",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "all",
+        "topic": "ZoneVolume",
+        "topicType": "str",
+        "min": 0,
+        "max": "0",
+        "step": 1,
+        "className": "",
+        "x": 460,
+        "y": 700,
+        "wires": [
+            [
+                "e459dd44a3e381aa"
+            ]
+        ]
+    },
+    {
+        "id": "c542be9fa143eade",
+        "type": "link out",
+        "z": "451d017d874f8d33",
+        "g": "35327b618f732e2c",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "15d1f38dc1eca127"
+        ],
+        "x": 805,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "02fa3635c021490c",
+        "type": "link in",
+        "z": "451d017d874f8d33",
+        "g": "35327b618f732e2c",
+        "name": "link in 8",
+        "links": [
+            "a71a0738151772d4"
+        ],
+        "x": 105,
+        "y": 720,
+        "wires": [
+            [
+                "ab90a2e0a1f1f199"
+            ]
+        ]
+    },
+    {
+        "id": "926218f5896607f8",
+        "type": "ui_dropdown",
+        "z": "451d017d874f8d33",
+        "g": "35327b618f732e2c",
+        "name": "",
+        "label": "Source",
+        "tooltip": "",
+        "place": "Select Source",
+        "group": "a705f2ec0c495ee3",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "ZoneSource",
+        "topicType": "str",
+        "className": "",
+        "x": 460,
+        "y": 760,
+        "wires": [
+            [
+                "e459dd44a3e381aa"
+            ]
+        ]
+    },
+    {
+        "id": "733faa6e6cee7cdd",
+        "type": "ui_text",
+        "z": "451d017d874f8d33",
+        "g": "35327b618f732e2c",
+        "group": "a705f2ec0c495ee3",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Zone Name",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 470,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ab90a2e0a1f1f199",
+        "type": "rnet-zone-listener",
+        "z": "451d017d874f8d33",
+        "g": "35327b618f732e2c",
+        "controller": 0,
+        "zone": "1",
+        "name": "",
+        "x": 230,
+        "y": 720,
+        "wires": [
+            [
+                "733faa6e6cee7cdd"
+            ],
+            [
+                "1c577810521351df"
+            ],
+            [
+                "9e9b054882acbabf"
+            ],
+            [
+                "926218f5896607f8"
+            ]
+        ]
+    },
+    {
+        "id": "e459dd44a3e381aa",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "35327b618f732e2c",
+        "controller": 0,
+        "zone": "1",
+        "name": "",
+        "x": 670,
+        "y": 700,
+        "wires": [
+            [
+                "c542be9fa143eade"
+            ]
+        ]
+    },
+    {
+        "id": "0e5162aba1533a16",
+        "type": "ui_switch",
+        "z": "451d017d874f8d33",
+        "g": "0eb49d72e7ab838d",
+        "name": "",
+        "label": "Power",
+        "tooltip": "",
+        "group": "71ca89f468f6cde1",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ZonePower",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 450,
+        "y": 920,
+        "wires": [
+            [
+                "661488df7263a4b1"
+            ]
+        ]
+    },
+    {
+        "id": "d2212ecc374f5bcb",
+        "type": "ui_slider",
+        "z": "451d017d874f8d33",
+        "g": "0eb49d72e7ab838d",
+        "name": "",
+        "label": "Volume",
+        "tooltip": "",
+        "group": "71ca89f468f6cde1",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "all",
+        "topic": "ZoneVolume",
+        "topicType": "str",
+        "min": 0,
+        "max": "0",
+        "step": 1,
+        "className": "",
+        "x": 460,
+        "y": 980,
+        "wires": [
+            [
+                "661488df7263a4b1"
+            ]
+        ]
+    },
+    {
+        "id": "a70643c62cddc8bd",
+        "type": "link out",
+        "z": "451d017d874f8d33",
+        "g": "0eb49d72e7ab838d",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [
+            "15d1f38dc1eca127"
+        ],
+        "x": 805,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c9c740b5a3326cdf",
+        "type": "link in",
+        "z": "451d017d874f8d33",
+        "g": "0eb49d72e7ab838d",
+        "name": "link in 9",
+        "links": [
+            "a71a0738151772d4"
+        ],
+        "x": 105,
+        "y": 1000,
+        "wires": [
+            [
+                "63264acc5649cecc"
+            ]
+        ]
+    },
+    {
+        "id": "27f99351b4e00120",
+        "type": "ui_dropdown",
+        "z": "451d017d874f8d33",
+        "g": "0eb49d72e7ab838d",
+        "name": "",
+        "label": "Source",
+        "tooltip": "",
+        "place": "Select Source",
+        "group": "71ca89f468f6cde1",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "ZoneSource",
+        "topicType": "str",
+        "className": "",
+        "x": 460,
+        "y": 1040,
+        "wires": [
+            [
+                "661488df7263a4b1"
+            ]
+        ]
+    },
+    {
+        "id": "82c502232f1233db",
+        "type": "ui_text",
+        "z": "451d017d874f8d33",
+        "g": "0eb49d72e7ab838d",
+        "group": "71ca89f468f6cde1",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Zone Name",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 470,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "63264acc5649cecc",
+        "type": "rnet-zone-listener",
+        "z": "451d017d874f8d33",
+        "g": "0eb49d72e7ab838d",
+        "controller": 0,
+        "zone": "2",
+        "name": "",
+        "x": 230,
+        "y": 1000,
+        "wires": [
+            [
+                "82c502232f1233db"
+            ],
+            [
+                "0e5162aba1533a16"
+            ],
+            [
+                "d2212ecc374f5bcb"
+            ],
+            [
+                "27f99351b4e00120"
+            ]
+        ]
+    },
+    {
+        "id": "661488df7263a4b1",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "0eb49d72e7ab838d",
+        "controller": 0,
+        "zone": "2",
+        "name": "",
+        "x": 670,
+        "y": 980,
+        "wires": [
+            [
+                "a70643c62cddc8bd"
+            ]
+        ]
+    },
+    {
+        "id": "af4dae255f148c0e",
+        "type": "ui_switch",
+        "z": "451d017d874f8d33",
+        "g": "eb08dca6d197bca0",
+        "name": "",
+        "label": "Power",
+        "tooltip": "",
+        "group": "175aaa03caaee545",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ZonePower",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1250,
+        "y": 360,
+        "wires": [
+            [
+                "f11d5d6739679652"
+            ]
+        ]
+    },
+    {
+        "id": "7f9fe41acb9fa86f",
+        "type": "ui_slider",
+        "z": "451d017d874f8d33",
+        "g": "eb08dca6d197bca0",
+        "name": "",
+        "label": "Volume",
+        "tooltip": "",
+        "group": "175aaa03caaee545",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "all",
+        "topic": "ZoneVolume",
+        "topicType": "str",
+        "min": 0,
+        "max": "0",
+        "step": 1,
+        "className": "",
+        "x": 1260,
+        "y": 420,
+        "wires": [
+            [
+                "f11d5d6739679652"
+            ]
+        ]
+    },
+    {
+        "id": "eb35fc1ba7f8437f",
+        "type": "link out",
+        "z": "451d017d874f8d33",
+        "g": "eb08dca6d197bca0",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "15d1f38dc1eca127"
+        ],
+        "x": 1605,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c991943bc5852d02",
+        "type": "link in",
+        "z": "451d017d874f8d33",
+        "g": "eb08dca6d197bca0",
+        "name": "link in 10",
+        "links": [
+            "a71a0738151772d4"
+        ],
+        "x": 905,
+        "y": 440,
+        "wires": [
+            [
+                "4cedf00337cedaae"
+            ]
+        ]
+    },
+    {
+        "id": "7d407e83f0f7f87c",
+        "type": "ui_dropdown",
+        "z": "451d017d874f8d33",
+        "g": "eb08dca6d197bca0",
+        "name": "",
+        "label": "Source",
+        "tooltip": "",
+        "place": "Select Source",
+        "group": "175aaa03caaee545",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "ZoneSource",
+        "topicType": "str",
+        "className": "",
+        "x": 1260,
+        "y": 480,
+        "wires": [
+            [
+                "f11d5d6739679652"
+            ]
+        ]
+    },
+    {
+        "id": "0eb3278d13d93b47",
+        "type": "ui_text",
+        "z": "451d017d874f8d33",
+        "g": "eb08dca6d197bca0",
+        "group": "175aaa03caaee545",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Zone Name",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1270,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4cedf00337cedaae",
+        "type": "rnet-zone-listener",
+        "z": "451d017d874f8d33",
+        "g": "eb08dca6d197bca0",
+        "controller": 0,
+        "zone": "3",
+        "name": "",
+        "x": 1030,
+        "y": 440,
+        "wires": [
+            [
+                "0eb3278d13d93b47"
+            ],
+            [
+                "af4dae255f148c0e"
+            ],
+            [
+                "7f9fe41acb9fa86f"
+            ],
+            [
+                "7d407e83f0f7f87c"
+            ]
+        ]
+    },
+    {
+        "id": "f11d5d6739679652",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "eb08dca6d197bca0",
+        "controller": 0,
+        "zone": "3",
+        "name": "",
+        "x": 1470,
+        "y": 420,
+        "wires": [
+            [
+                "eb35fc1ba7f8437f"
+            ]
+        ]
+    },
+    {
+        "id": "53d2da986ebba0bb",
+        "type": "ui_switch",
+        "z": "451d017d874f8d33",
+        "g": "cf1895087bf7054a",
+        "name": "",
+        "label": "Power",
+        "tooltip": "",
+        "group": "d9f9c3699b4a8b24",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ZonePower",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1250,
+        "y": 640,
+        "wires": [
+            [
+                "e0c3a7d140103961"
+            ]
+        ]
+    },
+    {
+        "id": "9d1635666f1e728d",
+        "type": "ui_slider",
+        "z": "451d017d874f8d33",
+        "g": "cf1895087bf7054a",
+        "name": "",
+        "label": "Volume",
+        "tooltip": "",
+        "group": "d9f9c3699b4a8b24",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "all",
+        "topic": "ZoneVolume",
+        "topicType": "str",
+        "min": 0,
+        "max": "0",
+        "step": 1,
+        "className": "",
+        "x": 1260,
+        "y": 700,
+        "wires": [
+            [
+                "e0c3a7d140103961"
+            ]
+        ]
+    },
+    {
+        "id": "4eda2d376bde4fa6",
+        "type": "link out",
+        "z": "451d017d874f8d33",
+        "g": "cf1895087bf7054a",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "15d1f38dc1eca127"
+        ],
+        "x": 1605,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "66cc09121ff80f5e",
+        "type": "link in",
+        "z": "451d017d874f8d33",
+        "g": "cf1895087bf7054a",
+        "name": "link in 11",
+        "links": [
+            "a71a0738151772d4"
+        ],
+        "x": 905,
+        "y": 720,
+        "wires": [
+            [
+                "fa27219171d4119a"
+            ]
+        ]
+    },
+    {
+        "id": "34e3136fa1edb45c",
+        "type": "ui_dropdown",
+        "z": "451d017d874f8d33",
+        "g": "cf1895087bf7054a",
+        "name": "",
+        "label": "Source",
+        "tooltip": "",
+        "place": "Select Source",
+        "group": "d9f9c3699b4a8b24",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "ZoneSource",
+        "topicType": "str",
+        "className": "",
+        "x": 1260,
+        "y": 760,
+        "wires": [
+            [
+                "e0c3a7d140103961"
+            ]
+        ]
+    },
+    {
+        "id": "2a528bf571ce1592",
+        "type": "ui_text",
+        "z": "451d017d874f8d33",
+        "g": "cf1895087bf7054a",
+        "group": "d9f9c3699b4a8b24",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Zone Name",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1270,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "fa27219171d4119a",
+        "type": "rnet-zone-listener",
+        "z": "451d017d874f8d33",
+        "g": "cf1895087bf7054a",
+        "controller": 0,
+        "zone": "4",
+        "name": "",
+        "x": 1030,
+        "y": 720,
+        "wires": [
+            [
+                "2a528bf571ce1592"
+            ],
+            [
+                "53d2da986ebba0bb"
+            ],
+            [
+                "9d1635666f1e728d"
+            ],
+            [
+                "34e3136fa1edb45c"
+            ]
+        ]
+    },
+    {
+        "id": "e0c3a7d140103961",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "cf1895087bf7054a",
+        "controller": 0,
+        "zone": "4",
+        "name": "",
+        "x": 1470,
+        "y": 700,
+        "wires": [
+            [
+                "4eda2d376bde4fa6"
+            ]
+        ]
+    },
+    {
+        "id": "68f3bea20f7dfd8a",
+        "type": "ui_switch",
+        "z": "451d017d874f8d33",
+        "g": "ae44a50fad4eec0f",
+        "name": "",
+        "label": "Power",
+        "tooltip": "",
+        "group": "a51e0d5988ca4c59",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ZonePower",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1250,
+        "y": 920,
+        "wires": [
+            [
+                "ecde8378ec01d85b"
+            ]
+        ]
+    },
+    {
+        "id": "ae862ebc3a5a5d4c",
+        "type": "ui_slider",
+        "z": "451d017d874f8d33",
+        "g": "ae44a50fad4eec0f",
+        "name": "",
+        "label": "Volume",
+        "tooltip": "",
+        "group": "a51e0d5988ca4c59",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "all",
+        "topic": "ZoneVolume",
+        "topicType": "str",
+        "min": 0,
+        "max": "0",
+        "step": 1,
+        "className": "",
+        "x": 1260,
+        "y": 980,
+        "wires": [
+            [
+                "ecde8378ec01d85b"
+            ]
+        ]
+    },
+    {
+        "id": "5e8947df1dfe176b",
+        "type": "link out",
+        "z": "451d017d874f8d33",
+        "g": "ae44a50fad4eec0f",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "15d1f38dc1eca127"
+        ],
+        "x": 1605,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "7180ea52b3b3984d",
+        "type": "link in",
+        "z": "451d017d874f8d33",
+        "g": "ae44a50fad4eec0f",
+        "name": "link in 12",
+        "links": [
+            "a71a0738151772d4"
+        ],
+        "x": 905,
+        "y": 1000,
+        "wires": [
+            [
+                "3e232f0b293c4416"
+            ]
+        ]
+    },
+    {
+        "id": "14ba8a0992a2aabe",
+        "type": "ui_dropdown",
+        "z": "451d017d874f8d33",
+        "g": "ae44a50fad4eec0f",
+        "name": "",
+        "label": "Source",
+        "tooltip": "",
+        "place": "Select Source",
+        "group": "a51e0d5988ca4c59",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "ZoneSource",
+        "topicType": "str",
+        "className": "",
+        "x": 1260,
+        "y": 1040,
+        "wires": [
+            [
+                "ecde8378ec01d85b"
+            ]
+        ]
+    },
+    {
+        "id": "8d98f49a128a1ff4",
+        "type": "ui_text",
+        "z": "451d017d874f8d33",
+        "g": "ae44a50fad4eec0f",
+        "group": "a51e0d5988ca4c59",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Zone Name",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1270,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "3e232f0b293c4416",
+        "type": "rnet-zone-listener",
+        "z": "451d017d874f8d33",
+        "g": "ae44a50fad4eec0f",
+        "controller": 0,
+        "zone": "5",
+        "name": "",
+        "x": 1030,
+        "y": 1000,
+        "wires": [
+            [
+                "8d98f49a128a1ff4"
+            ],
+            [
+                "68f3bea20f7dfd8a"
+            ],
+            [
+                "ae862ebc3a5a5d4c"
+            ],
+            [
+                "14ba8a0992a2aabe"
+            ]
+        ]
+    },
+    {
+        "id": "ecde8378ec01d85b",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "ae44a50fad4eec0f",
+        "controller": 0,
+        "zone": "5",
+        "name": "",
+        "x": 1470,
+        "y": 980,
+        "wires": [
+            [
+                "5e8947df1dfe176b"
+            ]
+        ]
+    },
+    {
+        "id": "c6043c84ab1fddf5",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "controller": 0,
+        "zone": 0,
+        "name": "",
+        "x": 670,
+        "y": 1260,
+        "wires": [
+            [
+                "200d9c7ea103e3cc"
+            ]
+        ]
+    },
+    {
+        "id": "2ffeac12140683b8",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "controller": 0,
+        "zone": "1",
+        "name": "",
+        "x": 670,
+        "y": 1300,
+        "wires": [
+            [
+                "5f70c783ba0b8d9e"
+            ]
+        ]
+    },
+    {
+        "id": "0cd8d146f743468c",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "controller": 0,
+        "zone": "2",
+        "name": "",
+        "x": 670,
+        "y": 1340,
+        "wires": [
+            [
+                "85431ddb2172c62b"
+            ]
+        ]
+    },
+    {
+        "id": "f1b3eaa2a781a66f",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "controller": 0,
+        "zone": "3",
+        "name": "",
+        "x": 670,
+        "y": 1380,
+        "wires": [
+            [
+                "2f3e8a33c12c0fa5"
+            ]
+        ]
+    },
+    {
+        "id": "c09a3e7b55fa3eb0",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "controller": 0,
+        "zone": "4",
+        "name": "",
+        "x": 670,
+        "y": 1420,
+        "wires": [
+            [
+                "2d3491daf27bfef2"
+            ]
+        ]
+    },
+    {
+        "id": "e4882decd9ce6059",
+        "type": "rnet-zone-setter",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "controller": 0,
+        "zone": "5",
+        "name": "",
+        "x": 670,
+        "y": 1460,
+        "wires": [
+            [
+                "e83a2ecbf2717a80"
+            ]
+        ]
+    },
+    {
+        "id": "5f70c783ba0b8d9e",
+        "type": "delay",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1300,
+        "wires": [
+            [
+                "200d9c7ea103e3cc"
+            ]
+        ]
+    },
+    {
+        "id": "85431ddb2172c62b",
+        "type": "delay",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1340,
+        "wires": [
+            [
+                "200d9c7ea103e3cc"
+            ]
+        ]
+    },
+    {
+        "id": "2f3e8a33c12c0fa5",
+        "type": "delay",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "300",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1380,
+        "wires": [
+            [
+                "200d9c7ea103e3cc"
+            ]
+        ]
+    },
+    {
+        "id": "2d3491daf27bfef2",
+        "type": "delay",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "400",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1420,
+        "wires": [
+            [
+                "200d9c7ea103e3cc"
+            ]
+        ]
+    },
+    {
+        "id": "e83a2ecbf2717a80",
+        "type": "delay",
+        "z": "451d017d874f8d33",
+        "g": "7e75f5a64dfbe49a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 1460,
+        "wires": [
+            [
+                "200d9c7ea103e3cc"
+            ]
+        ]
+    },
+    {
+        "id": "ea7c963ee0f7393f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4c4dd0d896be95fb",
+        "type": "ui_group",
+        "name": "Global",
+        "tab": "1bcf7c9c6911dccf",
+        "order": 8,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "15781dc87668e1a5",
+        "type": "rnet",
+        "host": "localhost",
+        "port": "3000",
+        "ignore": "true",
+        "debug": "errors"
+    },
+    {
+        "id": "43ff66300d5b9c4a",
+        "type": "ui_group",
+        "name": "Zone 0",
+        "tab": "1bcf7c9c6911dccf",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "a705f2ec0c495ee3",
+        "type": "ui_group",
+        "name": "Zone 1",
+        "tab": "1bcf7c9c6911dccf",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "71ca89f468f6cde1",
+        "type": "ui_group",
+        "name": "Zone 2",
+        "tab": "1bcf7c9c6911dccf",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "175aaa03caaee545",
+        "type": "ui_group",
+        "name": "Zone 3",
+        "tab": "1bcf7c9c6911dccf",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "d9f9c3699b4a8b24",
+        "type": "ui_group",
+        "name": "Zone 4",
+        "tab": "1bcf7c9c6911dccf",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "a51e0d5988ca4c59",
+        "type": "ui_group",
+        "name": "Zone 5",
+        "tab": "1bcf7c9c6911dccf",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "1bcf7c9c6911dccf",
+        "type": "ui_tab",
+        "name": "Audio",
+        "icon": "volume_up",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
