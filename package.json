@@ -6,6 +6,7 @@
 	"nodes": {
 	    "rnet-status": "rnet-status.js",
 	    "rnet-control": "rnet-control.js",
+	    "rnet-zone-setter": "rnet-zone-setter.js",
 	    "rnet": "rnet.js"
 	}
     },

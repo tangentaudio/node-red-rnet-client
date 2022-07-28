@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('rnet-zone-setter', {
+        category: 'RNet',
+        color: '#77eeee',
+        defaults: {
+            controller: { value: 0, required: true, validate: RED.validators.number() },
+            zone: { value: 0, required: true, validate: RED.validators.number() },
+	    name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+	inputLabels: function(index) {
+	    switch(index) {
+	    case 0:
+		return 'Zone Command Message Input';
+	    }
+	},
+        outputLabels: function(index) {
+            switch (index) {
+                case 0:
+                    return 'RNet Message Output';
+            }
+        },
+        icon: "arrow-in.svg",
+        label: function () {
+            return this.name || "RNet Zone Setter";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="rnet-zone-setter">
+    <div class="form-row">
+
+    <div class="form-row">
+        <label for="node-input-controller"><i class="fa fa-tag"></i> Controller</label>
+        <input type="text" id="node-input-controller" placeholder="Controller-ID">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-zoner"><i class="fa fa-tag"></i> Zone</label>
+        <input type="text" id="node-input-zone" placeholder="Zone-ID">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="rnet-zone-setter">
+    <p>RNet-Pi Zone Setter</p>
+</script>
+
