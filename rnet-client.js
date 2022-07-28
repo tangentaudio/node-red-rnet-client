@@ -5,21 +5,25 @@ module.exports = function (RED) {
     var socketTimeout = RED.settings.socketTimeout||null;
 
     const IGNORE_UKNOWNS = true;
-
-
     
     function RNetClient(config) {
         var node = this;
 
         var net = require('net');
         var crypto = require('crypto');
+	
+	RED.nodes.createNode(this, config);
+	
+	this.rnet = RED.nodes.getNode(config.rnet);
 
-        RED.nodes.createNode(this, config);
-
-        this.host = config.host || "localhost";
-        this.port = Number(config.port) || 3000;
+	if (this.rnet) {
+            this.host = this.rnet.host;
+            this.port = Number(this.rnet.port);
+	} else {
+	    this.host = 'localhost';
+	    this.port = 3000;
+	}
         this.debug = config.debug || "all";
-
 	
 	var id = crypto.createHash('md5').update(`${node.host}${node.port}`).digest("hex");
 	node.warn(`RNet host and port ${node.host}:${node.port} debug=${node.debug} id=${id}`);

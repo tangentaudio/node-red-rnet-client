@@ -1,69 +1,11 @@
-<script type="text/x-red" data-template-name="rnet-client">
-
-    <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
-    </div>
-  
-    <div class="form-row">RNet-Pi Server connection details:</div>
-
-    <div class="form-row">
-        <label for="node-input-host"><i class="fa fa-globe"></i> Host</label>
-        <input type="text" id="node-input-host" style="width:70%;" placeholder="localhost"/>
-        <span style="display: block; padding-left: 106px; color: gray; font-size: x-small;">Specify host of RNet-Pi Server (usually 'localhost')</span>
-        <input type="hidden" id="node-input-hostType">
-    </div>
-
-    <div class="form-row">
-        <label for="node-input-port"><i class="fa fa-globe"></i> Port</label>
-        <input type="text" id="node-input-port" style="width:70%;" placeholder="3000"/>
-        <span style="display: block; padding-left: 106px; color: gray; font-size: x-small;">RNet-Pi Server Port (usually 3000)</span>
-        <input type="hidden" id="node-input-portType">
-    </div>
-
-    <hr/>
-
-    <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-bug"></i> Debug</label>
-        <select id="node-input-debug" style="width:110px;">
-            <option value="none">Nothing</option>
-            <option value="errors">Only Errors</option>
-            <option value="all">Detailed</option>
-        </select>
-    </div>
-
-</script>
-
-<script type="text/x-red" data-help-name="rnet-client">
-    
-    <p>RNet-Pi client that connects to a specified host</p>
-
-    <h3>Inputs</h3>
-    <dl class="message-properties">
-        <dt>host<span class="property-type">string</span></dt>
-        <dd> the rnet-pi server to connect to </dd>
-        <dt>port<span class="property-type">string</span></dt>
-        <dd> the port rnet-pi server port </dd>
-        <dt class="optional">debug</dt>
-        <dd> level of debug messages to show </dd>
-    </dl>
-
-</script>
-
 <script type="text/javascript">
-
     RED.nodes.registerType('rnet-client', {
         category: 'network',
         color: '#aaaaff',
         defaults: {
-	    name: { value: "" },
-
-            host: { value: "localhost", required: true, validate: RED.validators.typedInput("hostType") },
-            hostType: { value: "str" },
-            port: { value: "3000", required: true, validate: RED.validators.typedInput("portType") },
-            portType: { value: "str" },
-            
-            debug: { value: "all" }
+	    rnet: { value: "", type: "rnet" },
+            debug: { value: "all" },
+	    name: { value: "" }
         },
         inputs: 1,
         outputs: 1,
@@ -76,15 +18,45 @@
         icon: "bridge-dash.svg",
         label: function () {
             return this.name || "RNet";
-        },
-        oneditprepare: function () {
-
-            var updateOptions = function() {
-            };
-
-            updateOptions();
-            
         }
     });
+</script>
+
+<script type="text/x-red" data-template-name="rnet-client">
+    <div class="form-row">
+    <label for="node-input-rnet"><i class="fa fa-tag"></i> RNet-Pi Server Config</label>
+      <input id="node-input-rnet"/>
+    </div>
+    
+    <hr/>
+
+    <div class="form-row">
+        <label for="node-input-debug"><i class="fa fa-bug"></i> Debug</label>
+        <select id="node-input-debug" style="width:110px;">
+            <option value="none">Nothing</option>
+            <option value="errors">Only Errors</option>
+            <option value="all">Detailed</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+  
+
+  
+</script>
+
+<script type="text/x-red" data-help-name="rnet-client">
+    
+    <p>RNet-Pi client that connects to a specified host</p>
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt class="optional">debug</dt>
+        <dd> level of debug messages to show </dd>
+    </dl>
 
 </script>
+

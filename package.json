@@ -1,17 +1,18 @@
 {
     "name": "node-red-rnet",
     "version": "0.1.0",
-    "description": "RNet-Pi Client",
+    "description": "RNet-Pi connector for Node RED",
     "node-red": {
 	"nodes": {
-	    "rnet-client": "rnet-client.js"
+	    "rnet-client": "rnet-client.js",
+	    "rnet": "rnet.js"
 	}
     },
     "dependencies": {
     },
     "repository": {
 	"type": "git",
-	"url": ""
+	"url": "git+https://github.com/tangentaudio/node-red-rnet-client"
     },
     "keywords": [
 	"node-red",
@@ -19,10 +20,10 @@
 	"rnet",
 	"russound"
     ],
-    "author": "Steve Richardson",
+    "author": "Steve Richardson <tangentaudio@gmail.com>",
     "license": "MIT",
     "bugs": {
-	"url": ""
+	"url": "https://github.com/tangentaudio/node-red-rnet-client/issues"
     },
-    "homepage": ""
+    "homepage": "https://github.com/tangentaudio/node-red-rnet-client/wiki"
 }
