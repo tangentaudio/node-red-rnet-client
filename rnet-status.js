@@ -92,7 +92,7 @@ module.exports = function (RED) {
 			msg.topic = 'Zone/' + controller + ':' + zone + '/Name';
 			msg.payload = name;
 			
-			//global.set('rnet.zone.' + controller + '.' + zone + '.name', name);            
+			node.context().global.set('rnet.zone.' + controller + '.' + zone + '.name', name);            
 		    }
 		    break;
 
@@ -103,7 +103,7 @@ module.exports = function (RED) {
 			msg.topic = 'Source/' + source + '/Name';
 			msg.payload = name;
 			
-			//global.set('rnet.source.' + source + '.name', name);
+			node.context().global.set('rnet.source.' + source + '.name', name);
 		    }
 		    break;
 		    
@@ -127,7 +127,7 @@ module.exports = function (RED) {
 			msg.topic = 'Zone/' + controller + ':' + zone + '/Volume';
 			msg.payload = volume;
 			
-			//global.set('rnet.zone.' + controller + '.' + zone + '.volume', volume);
+			node.context().global.set('rnet.zone.' + controller + '.' + zone + '.volume', volume);
 			
 		    }
 		    break;
@@ -184,7 +184,7 @@ module.exports = function (RED) {
 			msg.topic = 'Source/' + sourceID + "/MediaPlayState";
 			msg.payload = buf.readUint8(1) ? true : false;
 			
-			//global.set('rnet.source.' + sourceID + '.mediaPlayState', buf.readUInt8(1) ? true : false);
+			node.context().global.set('rnet.source.' + sourceID + '.mediaPlayState', buf.readUInt8(1) ? true : false);
 		    }
 		    break;
 		case 0x64:
@@ -194,7 +194,7 @@ module.exports = function (RED) {
 			msg.topic = 'Zone/' + controller + ':' + zone + '/MaxVolume';
 			msg.payload = buf.readUInt8(2);
 			
-			//global.set('rnet.zone.' + controller + '.' + zone + '.maxVolume', buf.readUInt8(2));
+			node.context().global.set('rnet.zone.' + controller + '.' + zone + '.maxVolume', buf.readUInt8(2));
 		    }
 		    break;
 		    

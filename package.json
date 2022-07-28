@@ -7,6 +7,7 @@
 	    "rnet-status": "rnet-status.js",
 	    "rnet-control": "rnet-control.js",
 	    "rnet-zone-setter": "rnet-zone-setter.js",
+	    "rnet-zone-listener": "rnet-zone-listener.js",
 	    "rnet": "rnet.js"
 	}
     },

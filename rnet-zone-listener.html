@@ -1,0 +1,59 @@
+<script type="text/javascript">
+    RED.nodes.registerType('rnet-zone-listener', {
+        category: 'RNet',
+        color: '#77eeee',
+        defaults: {
+            controller: { value: 0, required: true, validate: RED.validators.number() },
+            zone: { value: 0, required: true, validate: RED.validators.number() },
+	    name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 4,
+	inputLabels: function(index) {
+	    switch(index) {
+	    case 0:
+		return 'RNet Message Input';
+	    }
+	},
+        outputLabels: function(index) {
+            switch (index) {
+            case 0:
+                return 'Zone Name';
+	    case 1:
+		return 'Zone Power';
+	    case 2:
+		return 'Zone Volume';
+	    case 3:
+		return 'Zone Source';
+            }
+        },
+        icon: "arrow-in.svg",
+        label: function () {
+            return this.name || "RNet Zone Listener";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="rnet-zone-listener">
+    <div class="form-row">
+
+    <div class="form-row">
+        <label for="node-input-controller"><i class="fa fa-tag"></i> Controller</label>
+        <input type="text" id="node-input-controller" placeholder="Controller-ID">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-zone"><i class="fa fa-tag"></i> Zone</label>
+        <input type="text" id="node-input-zone" placeholder="Zone-ID">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="rnet-zone-listener">
+    <p>RNet-Pi Zone Listener</p>
+</script>
+
