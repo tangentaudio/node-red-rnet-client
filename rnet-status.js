@@ -2,13 +2,8 @@
 
 module.exports = function (RED) {
 
-    var socketTimeout = RED.settings.socketTimeout||null;
-
-    const IGNORE_UKNOWNS = true;
-    
-    function RNetClient(config) {
+    function RNetStatus(config) {
         var node = this;
-
         var net = require('net');
         var crypto = require('crypto');
 	
@@ -19,75 +14,13 @@ module.exports = function (RED) {
 	if (this.rnet) {
             this.host = this.rnet.host;
             this.port = Number(this.rnet.port);
+	    this.ignore = this.rnet.ignore;
+	    this.debug = this.rnet.debug;
 	} else {
 	    this.host = 'localhost';
 	    this.port = 3000;
-	}
-        this.debug = config.debug || "all";
-	
-	var id = crypto.createHash('md5').update(`${node.host}${node.port}`).digest("hex");
-	node.warn(`RNet host and port ${node.host}:${node.port} debug=${node.debug} id=${id}`);
-
-        var connectionPool = {};
-        var server;
-
-	var parseRNetC2S = (msg, socket) => {
-	    const path = msg.topic.split('/');
-	    if (msg.topic.startsWith('rnet/control/') && path.length >= 3) {
-		const dest = path[2];
-		var buf = null;
-
-		switch(dest) {
-		case "Zone":
-		    {
-			const zone = path[3];
-			const cmd = path[4];
-			var controllerID = 0;
-			var zoneID = 0;
-
-			if (zone.includes(':')) {
-			    controllerID = Number(zone.split(':')[0]);
-			    zoneID = Number(zone.split(':')[1]);
-			} else {
-			    zoneID = Number(zone);
-			}
-
-			switch(cmd) {
-			case "Power":
-                            buf = Buffer.alloc(2 + 3);
-                            buf.writeUInt8(0x08, 0);
-                            buf.writeUInt8(3, 1);
-                            buf.writeUInt8(controllerID, 2);
-                            buf.writeUInt8(zoneID, 3);
-                            buf.writeUInt8(msg.payload ? 1 : 0, 4);
-                            break;
-			case "Volume":
-                            buf = Buffer.alloc(2 + 3);
-                            buf.writeUInt8(0x09, 0);
-                            buf.writeUInt8(3, 1);
-                            buf.writeUInt8(controllerID, 2);
-                            buf.writeUInt8(zoneID, 3);
-                            buf.writeUInt8(msg.payload, 4);
-                            break;
-			case "Source":
-                            buf = Buffer.alloc(2 + 3);
-                            buf.writeUInt8(0x0A, 0);
-                            buf.writeUInt8(3, 1);
-                            buf.writeUInt8(controllerID, 2);
-                            buf.writeUInt8(zoneID, 3);
-                            buf.writeUInt8(msg.payload, 4);
-                            break;
-			default:
-                            node.warn("unknown zone cmd: " + cmd);
-			}
-		    }
-		    break;
-		default:
-		    node.warn("unknown pkt: " + dest);
-		}
-
-		socket.write(buf);
-	    }
+	    this.ignore = true;
+	    this.debug = 'all';
 	}
 	
 	var parseRNetS2C = (buffer, send) => {
@@ -135,7 +68,7 @@ module.exports = function (RED) {
 		    default:
 			p = 'ID-' + prop.toString(16);
 			pv = buf.readUInt8(1);
-			if (IGNORE_UKNOWNS) ignore_msg=true;
+			if (this.ignore) ignore_msg=true;
 		    }
 		    msg.topic = msg.topic + '/' + p;
 		    msg.payload  = pv;
@@ -237,7 +170,7 @@ module.exports = function (RED) {
 			default:
 			    p = 'ID-' + param.toString(16);
 			    pv = buf.readUInt8(3);
-			    if (IGNORE_UKNOWNS) ignore_msg = true;
+			    if (this.ignore) ignore_msg = true;
 			}
 			
 			msg.topic = msg.topic + '/' + p;
@@ -277,7 +210,7 @@ module.exports = function (RED) {
 		default:
 		    msg.topic = 'UnknownPacket';
 		    msg.payload = buf;
-		    if (IGNORE_UKNOWNS) ignore_msg = true;
+		    if (this.ignore) ignore_msg = true;
 		}
 		
 		msg.topic = 'rnet/status/' + msg.topic;
@@ -289,22 +222,34 @@ module.exports = function (RED) {
 	    return buffer.subarray(ofs);
 	}
 
-	
-        var configure = (id) => {
-	    node.warn(`configure for id=${id}`);
+	var subscribe = () => {
+	    var id = this.rnet.id;
 	    
-            var socket = connectionPool[id].socket;
+	    if (this.rnet.connectionPool[id] == null) return;
+	    node.warn(`Sending subscribe message to ${node.host}:${node.port}`);
 
-            socket.setKeepAlive(true, 120000);
+	    var socket = this.rnet.connectionPool[id].socket;
 
-            if (socketTimeout !== null) {
-                socket.setTimeout(socketTimeout);
-            }
+	    const subscribeMsg = Buffer.from([0x01, 0x01, 0x02]);
+	    socket.write(subscribeMsg);
+	};
+
+	
+	var configure = () => {
+	    var id = this.rnet.id;
+
+	    if (this.rnet.connectionPool[id] === undefined) {
+		node.warn(`configure for id=${id}; connection does not exist yet`);
+		setTimeout(configure, 1000, 'configure');
+		return;
+	    }
+
+            var socket = this.rnet.connectionPool[id].socket;
 
             socket.on('data', (data) => {
-                if (node.debug === 'all') node.warn(`Data received from ${socket.remoteAddress}:${socket.remotePort}`);
+		if (node.debug === 'all') node.warn(`Data received from ${socket.remoteAddress}:${socket.remotePort}`);
 		
-                var buffer = Buffer.concat([connectionPool[id].buffer, Buffer.from(data)]);
+		var buffer = Buffer.concat([this.rnet.connectionPool[id].buffer, Buffer.from(data)]);
 
 		try {
 		    buffer = parseRNetS2C(buffer, node.send);
@@ -312,33 +257,23 @@ module.exports = function (RED) {
 		    node.error("parse error " + err);
 		}
 		
-                connectionPool[id].buffer = buffer;
+		this.rnet.connectionPool[id].buffer = buffer;
             });
 
             socket.on('end', function () {
 		node.status({fill:"red", shape:"dot",text:"end"});
-		if (node.debug === 'all') node.warn(`on end, socket ${node.host}:${node.port}`);
             });
 
             socket.on('timeout', function () {
 		node.status({fill:"red", shape:"dot",text:"timeout"});
-	
-                socket.end();
-		if (node.debug === 'all') node.warn(`on timeout, socket ${node.host}:${node.port}`);
             });
 
             socket.on('close', function () {
-                delete connectionPool[id];
 		node.status({fill:"red", shape:"dot",text:"closed"});
-		if (node.debug === 'all') node.warn(`on close, socket ${node.host}:${node.port}`);
-
-		setTimeout(listen, 5000, 'reconnect');
             });
 
             socket.on('error', function (err) {
-                node.log(err);
 		node.status({fill:"red", shape:"dot",text:"error: " + err});
-		if (node.debug === 'all') node.warn(`on error, socket ${node.host}:${node.port}`);
             });
 
 	    socket.on('connect', function() {
@@ -349,75 +284,10 @@ module.exports = function (RED) {
 	    socket.on('ready', function() {
 		node.status({fill:"green", shape:"ring",text:"connected and ready"});
 	    });
+	};
 
-        };
-
-        var close = function() {
-            if (node.debug === 'all') node.warn(`Closed socket ${node.host}:${node.port}`);
-        };
-
-        var listen = function() {
-	    if (typeof connectionPool[id] === 'undefined') {
-		if (node.debug === 'all') node.warn(`Creating connection in pool for ${node.host}:${node.port} id=${id}...`);
-
-                connectionPool[id] = {
-		    socket: net.connect(node.port, node.host),
-		    buffer: Buffer.alloc(0)
-                };
-
-                configure(id);
-	    }
-	    else {
-                if (node.debug !== 'none') node.error(`Already connected`);
-	    }
-
-        };
-	
-
-        var subscribe = function() {
-	    node.warn(`Sending subscribe message to ${node.host}:${node.port} id=${id}...`);
-	    if (connectionPool[id] == null) return;
-	    var socket = connectionPool[id].socket;
-
-	    const subscribeMsg = Buffer.from([0x01, 0x01, 0x02]);
-	    socket.write(subscribeMsg);
-
-        };
-	
-
-	listen();
-	
-	
-        node.on('input', function (msg, send, done) {
-            node.host = RED.util.evaluateNodeProperty(config.host, config.hostType, this, msg);
-            node.port = Number(RED.util.evaluateNodeProperty(config.port, config.portType, this, msg));
-	    node.warn("input: " + msg.topic + "=>" + msg.payload);
-
-	    var socket = connectionPool[id].socket;
-
-	    parseRNetC2S(msg, socket);
-        });
-
-        node.on("close",function() {
-            for (var c in connectionPool) {
-                if (connectionPool.hasOwnProperty(c)) {
-                    var socket = connectionPool[c].socket;
-                    socket.end();
-                    socket.destroy();
-                    socket.unref();
-                }
-            }
-
-            server.close();
-            connectionPool = {};
-            node.status({});
-
-        });
-
-
+	configure();
     };
 
-    RED.nodes.registerType("rnet-client", RNetClient);
-
-    
+    RED.nodes.registerType("rnet-status", RNetStatus);
 };

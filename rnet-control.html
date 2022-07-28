@@ -1,0 +1,33 @@
+<script type="text/javascript">
+    RED.nodes.registerType('rnet-control', {
+        category: 'RNet',
+        color: '#77ffff',
+        defaults: {
+	    rnet: { value: "", type: "rnet" },
+	    name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "bridge-dash.svg",
+        label: function () {
+            return this.name || "RNet Control Input";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="rnet-control">
+    <div class="form-row">
+    <label for="node-input-rnet"><i class="fa fa-tag"></i> RNet-Pi Server Config</label>
+      <input id="node-input-rnet"/>
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="rnet-control">
+    <p>RNet-Pi Control Input</p>
+</script>
+

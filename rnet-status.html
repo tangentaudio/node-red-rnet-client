@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('rnet-status', {
+        category: 'RNet',
+        color: '#77ffff',
+        defaults: {
+	    rnet: { value: "", type: "rnet" },
+	    name: { value: "" }
+        },
+        inputs: 0,
+        outputs: 1,
+        outputLabels: function(index) {
+            switch (index) {
+                case 0:
+                    return 'Status Message Output';
+            }
+        },
+        icon: "bridge-dash.svg",
+        label: function () {
+            return this.name || "RNet Status Output";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="rnet-status">
+    <div class="form-row">
+    <label for="node-input-rnet"><i class="fa fa-tag"></i> RNet-Pi Server Config</label>
+      <input id="node-input-rnet"/>
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="rnet-status">
+    <p>RNet-Pi Status Output</p>
+</script>
+

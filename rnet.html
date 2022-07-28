@@ -4,6 +4,8 @@
       defaults: {
           host: { value: "localhost", required: true },
           port: { value: 3000, required: true, validate: RED.validators.number() },
+	  ignore: { value: "true" },
+          debug: { value: "all" }
       },
       label: function() {
           return this.host + ":" + this.port;
@@ -20,4 +22,20 @@
         <label for="node-config-input-port"><i class="fa fa-bookmark"></i> Port</label>
         <input type="text" id="node-config-input-port">
     </div>
+    <div class="form-row">
+        <label for="node-config-input-ignore"><i class="fa fa-bug"></i> Unknowns</label>
+        <select id="node-config-input-ignore">
+            <option value="true">Ignore</option>
+            <option value="false">Process</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-debug"><i class="fa fa-bug"></i> Debug</label>
+        <select id="node-config-input-debug">
+            <option value="none">Nothing</option>
+            <option value="errors">Only Errors</option>
+            <option value="all">Detailed</option>
+        </select>
+    </div>
+    
 </script>

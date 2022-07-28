@@ -4,7 +4,8 @@
     "description": "RNet-Pi connector for Node RED",
     "node-red": {
 	"nodes": {
-	    "rnet-client": "rnet-client.js",
+	    "rnet-status": "rnet-status.js",
+	    "rnet-control": "rnet-control.js",
 	    "rnet": "rnet.js"
 	}
     },
