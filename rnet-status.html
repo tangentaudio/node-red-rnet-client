@@ -6,6 +6,7 @@
 	    rnet: { value: "", type: "rnet" },
 	    name: { value: "" }
         },
+	paletteLabel: "RNet Status",
         inputs: 0,
         outputs: 1,
         outputLabels: function(index) {
@@ -14,7 +15,7 @@
                     return 'Status Message Output';
             }
         },
-        icon: "bridge-dash.svg",
+        icon: "font-awesome/fa-send",
         label: function () {
             return this.name || "RNet Status Output";
         }
