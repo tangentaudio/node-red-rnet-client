@@ -23,15 +23,27 @@ You must install the node-red-dashboard node to use the example.  You can do thi
 
 Install the node-red-rnet-client node from the palette manager, just as you would install any other 3rd party node.  When installed, you will see a new section in your node paletted called "RNet," which contains four new node types.
 
-You will need both an RNet Control and an RNet Status node in your flows to fully interoperate with your RNet device.  There is a configuration node that is shared between Control and Status nodes, which contains the IP address/hostname and port of your RNet-Pi server.
-
-### RNet Status
+### RNet Status & RNet Control
 
 The RNet Status node will output MQTT-like messages based on status updates from the RNet-Pi server.  You can directly inject these messages into an MQTT broker, or connect them to other nodes and logic to accomplish your automation.  This allows your Node RED flow to know about changes that occur in your RNet Russound system, in real-time.
 
-### RNet Control
-
 The RNet Control node takes MQTT-like messages from your automations and translates them to packets that the RNet-Pi server understands  This allows your Node RED flows to control your RNet Russound system.
+
+#### Configuring
+
+You will need both an RNet Control and an RNet Status node in your flows to fully interoperate with your RNet device.  There is a configuration node that is shared between Control and Status nodes, which contains the IP address/hostname and port of your RNet-Pi server.
+
+Edit either the Control or Status node, and click on the pencil icon next to the "RNet-Pi Server Config" section.  This will allow you to create an initial config to point to your RNet-Pi server.
+
+![Config 1](screenshots/screenshot5.png)
+
+The config itself is very simple, consisting of a host and port for your RNet-Pi node server.  These values should come from the configuration you did earlier when you set up RNet-Pi on your system.
+
+Two other settings are for developer purposes - __Unknowns__ and __Debug__.  You can safely leave these alone if you are not a developer.
+
+![Config 2](screenshots/screenshot6.png)
+
+
 
 ### RNet ZoneSetter
 
@@ -47,15 +59,45 @@ Each ZoneListener node needs to have a controller ID and a zone ID associated wi
 
 ## Examples
 
-![Dashboard Example](screenshots/dashboard.png)
+### Dashboard Example
 
 Included in the distribution is a dashboard example that provides a simple 6-zone controller.  For each of the six zones, power, volume and source selection are provided.  There are also global command examples which can turn your entire system on/off, or set the same source in all zones.
+
+![Dashboard Example](screenshots/dashboard.png)
+
+#### Installation & Configuration
 
 To use the example, click the Node RED menu (upper right) and select Import.  Then choose "Examples" and select "node-red-rnet" from the list.  You should see the "Dashboard Example" in the list.  Select this, and select "Import to New Flow" below.  Finally, click "Import," and a new Flow will be created.
 
 Configure the RNet Control Input (or Status Output, since they are shared) server settings for your RNet Pi server.
 
 If you have an MQTT broker in your system, you'll also need to adjust the MQTT settings.  You can also choose to delete the MQTT nodes if you do not use MQTT - the example dashboard will still work.
+
+![Status, Control and MQTT connections](screenshots/screenshot1.png)
+
+#### Link Nodes
+
+For a cleaner look, the example makes extensive use of Link In and Link Out nodes to connect zone control/status to the individual dashboard elements.  If you highlight one of the links (small, gray boxes with arrows), you will see dashed lines showing the 'virtual' connections for messages to flow.
+
+#### Anatomy of a Zone
+
+The controls for an individual zone are simple.  A text name for the zone is displayed, and there are controls for power, volume and source.
+
+![Zone Dashboard Controls](screenshots/screenshot2.png)
+
+Zone Name is presently display-only, so it only has a connection to the RNet ZoneListener.
+
+Power, volume and source are both user-controlled and will also reflect status if it changes asynchronously (e.g. another household member turning a zone on or off).  Thus, these controls have both an input from the ZoneListener, and an output to the ZoneSetter.
+
+If you want to cut and paste the nodes inside of the Zone grouping, the controller ID and zone ID both must be set in the ZoneListener and ZoneSetter.  This is how the nodes know what zone status to listen to, and how it know what zone to send command updates to.  Individual controls do not need to have configuration changes made to them, however if you cut and paste the contents of the Zone group, the controls will need to be relocated to the correct dashboard grouping.
+
+#### Global
+
+An example of a basic way to provide "global" commands that apply settings to all zones is shown at the bottom of the example flow.
+
+![Zone Globals](screenshots/screenshot4.png)
+
+This is a very simplistic approach that sends multiple commands when power or source settings are changed, and does not take advantage of any RNet features which allow zone grouping.
 
 
 ## Protocol Message Format
