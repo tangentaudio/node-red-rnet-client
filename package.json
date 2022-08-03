@@ -1,32 +1,32 @@
 {
-    "name": "node-red-rnet",
-    "version": "0.1.0",
-    "description": "RNet-Pi connector for Node RED",
-    "node-red": {
-	"nodes": {
-	    "rnet-status": "rnet-status.js",
-	    "rnet-control": "rnet-control.js",
-	    "rnet-zone-setter": "rnet-zone-setter.js",
-	    "rnet-zone-listener": "rnet-zone-listener.js",
-	    "rnet": "rnet.js"
-	}
-    },
-    "dependencies": {
-    },
-    "repository": {
-	"type": "git",
-	"url": "git+https://github.com/tangentaudio/node-red-rnet-client"
-    },
-    "keywords": [
-	"node-red",
-	"node",
-	"rnet",
-	"russound"
-    ],
-    "author": "Steve Richardson <tangentaudio@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-	"url": "https://github.com/tangentaudio/node-red-rnet-client/issues"
-    },
-    "homepage": "https://github.com/tangentaudio/node-red-rnet-client/wiki"
+   "name": "@tangentaudio/node-red-rnet",
+   "version": "0.1.0",
+   "description": "RNet-Pi connector for Node RED",
+   "node-red": {
+      "version": ">=1.0.0",
+      "nodes": {
+         "rnet-status": "rnet-status.js",
+         "rnet-control": "rnet-control.js",
+         "rnet-zone-setter": "rnet-zone-setter.js",
+         "rnet-zone-listener": "rnet-zone-listener.js",
+         "rnet": "rnet.js"
+      }
+   },
+   "dependencies": {},
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tangentaudio/node-red-rnet-client"
+   },
+   "keywords": [
+      "node-red",
+      "node",
+      "rnet",
+      "russound"
+   ],
+   "author": "Steve Richardson <tangentaudio@gmail.com>",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/tangentaudio/node-red-rnet-client/issues"
+   },
+   "homepage": "https://github.com/tangentaudio/node-red-rnet-client/wiki"
 }
