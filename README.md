@@ -47,6 +47,8 @@ Each ZoneListener node needs to have a controller ID and a zone ID associated wi
 
 ## Examples
 
+![Dashboard Example](screenshots/dashboard.png)
+
 Included in the distribution is a dashboard example that provides a simple 6-zone controller.  For each of the six zones, power, volume and source selection are provided.  There are also global command examples which can turn your entire system on/off, or set the same source in all zones.
 
 To use the example, click the Node RED menu (upper right) and select Import.  Then choose "Examples" and select "node-red-rnet" from the list.  You should see the "Dashboard Example" in the list.  Select this, and select "Import to New Flow" below.  Finally, click "Import," and a new Flow will be created.
