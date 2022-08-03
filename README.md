@@ -15,6 +15,8 @@ GitHub:
 
 Follow the instructions for the server, and make note of the configuration settings that you use.  You will need to enter some of these settings into your Node RED configuration.  Be sure the server is working properly using the app, before attempting to use it with Node RED.
 
+Note: It's best to set up names for all sources and all zones, even if you are not using all of them.  If you don't do this, you may encounter problems with the app or the Node RED integration.
+
 ### Node RED Dashboard & Controls
 
 You must install the node-red-dashboard node to use the example.  You can do this through the "Manage Palette->Install" option in the menu.
